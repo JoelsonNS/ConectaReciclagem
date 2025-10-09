@@ -18,66 +18,55 @@
         <h1 class="cidadao_tit1">Para darmos 
         continuidade, preencha as informações abaixo:</h1>
 
-        <form autocomplete="off">
-            <div class="linha">
-            <p class="name">Nome:</p>
-            <input type="text" id="nameinput" placeholder="Ex: José da Silva" required></div>
+      <form autocomplete="off">
+    <div class="linha">
+        <p class="name">Nome:</p>
+        <input type="text" id="nameinput" placeholder="Ex: José da Silva" required>
+    </div>
 
-            <div class="linha">
-            <p class="contato">Contato:</p>
-            <input type="text" id="contatoinput" placeholder="Ex: (00) 98129-1995)" required></div>
+    <div class="linha">
+        <p class="contato">Contato:</p>
+        <input type="text" id="contatoinput" placeholder="Ex: (00) 98129-1995)" required>
+    </div>
 
-            <div class="linha">
-            <p class="endereco">Endereço:</p>
-            <input type="text" id="enderecoinput" placeholder="Ex: Rua Sete de Setembro, 26, Centro" required></div>
+    <div class="linha">
+        <p class="endereco">Endereço:</p>
+        <input type="text" id="enderecoinput" placeholder="Ex: Rua Sete de Setembro, 26, Centro" required>
+    </div>
 
-            <div class="linha">
-            <p class="tipo_do_material">Tipo do material:</p>
-            <input type="text" id="materialinput" required></div>
+    <!-- Nova seção para os botões de tipo de material -->
+    <div class="linha">
+        <p class="tipo_do_material">Tipo do material:</p>
+        <div class="opcoes-material">
+            <input type="checkbox" id="papel" name="material[]" value="Papel" />
+            <label for="papel" class="botao-material">
+                <span class="icone">📦</span> <!-- Placeholder para ícone de caixa (use SVG se preferir) -->
+                <span class="texto">Papel</span>
+            </label>
 
-            <div class="linha">
-            <p class="quantidade">Quantidade:</p>
-            <input type="text" id="quantidadeinput" required></div>
-        
-            <div class="linha">
-            <p class="foto_do_material">Foto do material:</p>
-            <input type="file" id="imagem" accept="image/*" required></div>
-
-
-        <div class="linha">
-                <p class="tipo_do_material">Tipo do material:</p>
-
-            <div class="botoes-materiais">
-                <label>
-                    <input type="checkbox" name="material" value="Papel"> Papel
-                </label>
-                <label>
-                    <input type="checkbox" name="material" value="Plástico"> Plástico
-                </label>
-                <label>
-                    <input type="checkbox" name="material" value="Vidro"> Vidro
-                </label>
-                <label>
-                    <input type="checkbox" name="material" value="Metal"> Metal
-                </label>
-                <label>
-                    <input type="checkbox" name="material" value="Orgânico"> Orgânico
-                </label>
-            </div>
+            <input type="checkbox" id="plastico" name="material[]" value="Plástico" />
+            <label for="plastico" class="botao-material">
+                <span class="icone">🛢️</span> <!-- Placeholder para garrafa plástica -->
+                <span class="texto">Plástico</span>
+            </label>
+            <input type="checkbox" id="Oleo" name="material[]" value="Vidro" />
+            
+            <label for="vidro" class="botao-material">
+                <span class="icone">🍾</span> <!-- Placeholder para garrafa de vidro -->
+                <span class="texto">Vidro</span>
+            </label>
         </div>
+    </div>
 
-        <div class="linha">
-            <p class="quantidade">Quantidade:</p>
-            <input type="text" id="quantidadeinput" required>
-        </div>
+    
+    
+    <div class="linha">
+        <p class="foto_do_material">Foto do material:</p>
+        <input type="file" id="imagem" accept="image/*" required>
+    </div>
 
-        <div class="linha">
-            <p class="foto_do_material">Foto do material:</p>
-            <input type="file" id="imagem" accept="image/*" required>
-        </div>
-
-            <input type="submit" value="ENVIAR" id="botao_enviar">
-        </form>
+        <input type="submit" value="ENVIAR" id="botao_enviar">
+</form>
 
         <img src="assets/Images/familia.png" alt="familia" class="familia">
         
