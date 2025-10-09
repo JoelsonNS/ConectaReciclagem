@@ -1,46 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie-edge">
-        <title>Área do cidadão - ConectaReciclagem</title>
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/pagina_cidadao.css">
-    </head>
-        <body>
-        <h1 class="cidadao_tit1">Para darmos continuidade, preencha as informações abaixo:</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="Images">
+    <title>Área do cidadão - ConectaReciclagem</title>
 
-        <div class="linha">
-        <p class="name">Nome:</p>
-        <input type="text" id="nameinput" required></div>
+    <link rel="shortcut icon" href="assets/icones/eco.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/pagina_cidadao.css">
 
-        <div class="linha">
-        <p class="contato">Contato:</p>
-        <input type="text" id="contatoinput" required></div>
+</head>
+<body>
 
-        <div class="linha">
-        <p class="endereco">Endereço:</p>
-        <input type="text" id="enderecoinput" required></div>
+    <main>
 
-        <div class="linha">
-        <p class="tipo_do_material">Tipo do material:</p>
-        <input type="text" id="materialinput" required></div>
+        <h1 class="cidadao_tit1">Para darmos 
+        continuidade, preencha as informações abaixo:</h1>
 
-        <div class="linha">
-        <p class="quantidade">Quantidade:</p>
-        <input type="text" id="quantidadeinput" required></div>
+        <form autocomplete="off">
+            <div class="linha">
+            <p class="name">Nome:</p>
+            <input type="text" id="nameinput" placeholder="Ex: José da Silva" required></div>
+
+            <div class="linha">
+            <p class="contato">Contato:</p>
+            <input type="text" id="contatoinput" placeholder="Ex: (00) 98129-1995)" required></div>
+
+            <div class="linha">
+            <p class="endereco">Endereço:</p>
+            <input type="text" id="enderecoinput" placeholder="Ex: Rua Sete de Setembro, 26, Centro" required></div>
+
+            <div class="linha">
+            <p class="tipo_do_material">Tipo do material:</p>
+            <input type="text" id="materialinput" required></div>
+
+            <div class="linha">
+            <p class="quantidade">Quantidade:</p>
+            <input type="text" id="quantidadeinput" required></div>
         
-        <div class="linha">
-        <p class="foto_do_material">Foto do material:</p>
-        <input type="file" id="imagem" accept="image/*" required></div>
+            <div class="linha">
+            <p class="foto_do_material">Foto do material:</p>
+            <input type="file" id="imagem" accept="image/*" required></div>
 
-        <input type="button" value="ENVIAR" id="botao_enviar" required>
+
+        <div class="linha">
+                <p class="tipo_do_material">Tipo do material:</p>
+
+            <div class="botoes-materiais">
+                <label>
+                    <input type="checkbox" name="material" value="Papel"> Papel
+                </label>
+                <label>
+                    <input type="checkbox" name="material" value="Plástico"> Plástico
+                </label>
+                <label>
+                    <input type="checkbox" name="material" value="Vidro"> Vidro
+                </label>
+                <label>
+                    <input type="checkbox" name="material" value="Metal"> Metal
+                </label>
+                <label>
+                    <input type="checkbox" name="material" value="Orgânico"> Orgânico
+                </label>
+            </div>
+        </div>
+
+        <div class="linha">
+            <p class="quantidade">Quantidade:</p>
+            <input type="text" id="quantidadeinput" required>
+        </div>
+
+        <div class="linha">
+            <p class="foto_do_material">Foto do material:</p>
+            <input type="file" id="imagem" accept="image/*" required>
+        </div>
+
+            <input type="submit" value="ENVIAR" id="botao_enviar">
+        </form>
 
         <img src="assets/Images/familia.png" alt="familia" class="familia">
-        <script src="pagina-cidadao.js"></script>
-        <footer class="footer">
+        
+    </main>
+       
+    <footer class="footer">
         <p class="footer">&copy; 2025 Conecta Reciclagem - Todos os direitos reservados - Flavia, Raquel, Leandro, Alice e Joelson</p> 
     </footer>
+
+    <script src="pagina-cidadao.js"></script>
 </body>
 </html>

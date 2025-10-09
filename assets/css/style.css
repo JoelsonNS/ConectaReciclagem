@@ -1,161 +1,187 @@
-/* No arquivo: style.css */
+@charset "UTF-8";
 
-body {
-    /* Define uma fonte mais moderna para a página */
-    font-family: sans-serif;
-    
-    /* Remove margens padrão do navegador */
-    margin: 0; 
-    
-    /* Garante que o corpo ocupe pelo menos 100% da altura da tela */
-    min-height: 100vh; 
-    
-    /* A mágica da divisão de cores acontece aqui */
-    /* No arquivo: style.css */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-/* Substitua a linha do background por esta */
-/* No arquivo: style.css */
+/* Configurações globais do CSS */
+/* Variáveis que auxilia na mudnça das cores dos elemntos de forma mais prática, ex.: Mudar a cor da Var --cor0, tudo o que foi configurado nessa cor vai mudar pra nova cor escolhida*/
+:root {
+    --cor0: #000000;
+    --cor1: #ffffff;
+    --cor2: #02634f;
+    --cor3: #ff4500;
+    --cor4: #cc3700;
+    --cor5: #f6fadd;
 
-/* Substitua a linha do background por esta */
-background: linear-gradient(
-    180deg, 
-    #f8f9fa 85%, 
-    #2d6a4f 15%
-);
-    
-    /* Faz com que o fundo fique parado mesmo se a página rolar */
-    background-attachment: fixed; 
-}
-.imagem1 {
-width: 300px;
-height: auto;
-position: fixed;
-bottom: 0;
-right: 0;
-margin: 10px;
+    --font-padrao: Agrandir, Arial, sans-serif;
+    --font-destaque: "Bebas Neue", sans-serif;
 }
 
-.botões_pagina1 {
-    background-color: rgba(244, 91, 3, 0.855);
-    color:white;
-    border: none;
-    cursor:pointer;
-    border-radius: 10px;
-    display:inline-block;
+/* Retira todas as margins e padding */
+* {
+    margin: 0px;
+    padding: 0px;
 }
-.logo {
-    color:#063e25
-}
-.footer {
-    position:fixed;
-    bottom:0;
-    left:0;
-}
-
 
 body {
     font-size: 16px; /* ou 1rem */
-    font-family: 'Agrandir', Arial, sans-serif;
+    font-family: var(--font-padrao);
+    background-color: var(--cor5);
+}
+
+header {
+    min-height: 0px;
 }
 
 .titulo {
-    position: relative; /*Margem flexível*/
-    left: 10px; top: 15px;
-    margin-top: 10px;
-    font-size: 2.5rem; /*Cresce ou diminui conforme a tela*/
+    position: relative;
+    top: 50px;
+    left: 13px;
+    padding: 20px;
+    min-width: 280px;
+    max-width: 800px;
+    margin-right: auto;
+    
+    font-size: 2.9rem; /*Cresce ou diminui conforme a tela*/
+    font-family: var(--font-destaque);
+    color: var(--cor0);
 }
 
-/*Botão Iniciar Processo*/
+/*Botão Iniciar coleta (Elemento Pai - Conteiner)*/
+.botaoIniciarProcesso {
+    position: relative; /* Define o contêiner como referência para posicionamento absoluto */
+    min-height: 100px; /* Ajuste conforme necessário para o layout */
+    width: 100%; /* Garante que o contêiner ocupe a largura total */
+    bottom:50px;
+    right: 70px;
+}
+/*Botão Iniciar coleta (Elemento filho)*/
 .botInici {
-    display: inline-block; /* faz o link se comportar como botão */
-    text-decoration: none; /* remove o sublinhado do texto do botão. */
-    font-size: 1.2rem; /* tamanho da fonte do texto do botão.*/
-    border-radius: 12px; /* bordas arredondadas */
-    background-color: orangered; /*Cor do botão */
-   
-    color: rgb(255, 255, 255);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 12px;
+    background-color: var(--cor3);
+    color: var(--cor1);
+    font-size: 1.4rem;
+    text-decoration: none; /*Retira o sublinhado.*/
+    text-align: center;
+    position: absolute; /* Permite mover o botão livremente */
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância da direita */
+    transition-duration: 0.5s; /* Define a duração da transição dar cor*/
+    font-weight: bold;
 }
 
 .botInici:hover {
-    background-color: #cc3700; /* Tom mais escuro no hover */
+    background-color: var(--cor4); /* Tom mais escuro no hover */
 }
 
 
+.pag2_Botao_Cidadao {
+    width: 160px; /*Largura do botão.*/
+    height: 40px; /*Altura do botão.*/
+    display: inline-block; /* faz o link se comportar como botão */
+    text-decoration: none; /* remove o sublinhado do texto do botão. */
+    padding: 12px 24px;
+    font-size: 1.2rem; /* tamanho da fonte do texto do botão.*/
+    border-radius: 12px; /* bordas arredondadas */
+    position: relative; /*Movimentar livrimente o elemento (botão nesse caso).*/
+    left: 500px; /*Movimetar para a esquerda o elemento (botão).*/
+    bottom: 50px; /*Movimetar para cima o elemento (botão).*/
+    font-family: none;
+    color: var(--cor0);
+
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    min-width: 300px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 2px;
+}
 
 .pag1_Paragr1 {
+    display: flex;
     margin-left: 2%;
-    margin-top: 15px;
+    margin-top: 20px;
     font-size: 4rem;
-    color: #02634f;
+    color: var(--cor2);
+    font-family: var(--font-destaque);
 }
 
 .pag1_Paragr2 {
+    display: flex;
     margin-left: 2%;
-    margin-top: 15px;
+    margin-top: 50px;
     font-size: 2vw;
-    color: rgb(11, 11, 11);
+    color: var(--cor0);
+    
 }
 
 .imagem_Pg1 {
     position: relative;
-    max-width: 40%;       /* A imagem não ultrapassa o tamanho do container */
-    height: auto;          /* Mantém a proporção */
-    display: block;        /* Remove pequenos gaps de inline */
-    margin-left: auto;     /* Empurra a imagem para o lado direito */
-    transform: translateY(-400px); /* Sobe a imagem 20px */
-}
-
-.barraHorizontal {
-    width: 100%;
-    height: 10px;
-    background: #02634f;
-    margin: 0;
-    z-index: -1; /* Joga para trás do conteúdo (texto, etc.) */
+    width: 40%;                      /* A imagem não ultrapassa o tamanho do container */
+    height: auto;                    /* Mantém a proporção */
+    display: block;                  /* Remove pequenos gaps de inline */
+    margin-left: auto;               /* Empurra a imagem para o lado direito */
+    transform: translateY(-500px);   /* Sobe a imagem 20px */
+    
 }
 
 footer {
-    width: 100%;               /* Ocupa toda a largura da tela */
-    background-color: #02634f; /* Cor de fundo */
-    color: white;              /* Cor do texto */
-    text-align: center;        /* Centraliza o texto */
-    padding: 20px 0;           /* Espaçamento interno em cima e embaixo */
-    position: relative;        /* Pode usar fixed se quiser fixo na tela */
-    bottom: 0;                 /* Para fixar no final se usar position: fixed */
+    width: 100%;   /* Ocupa toda a largura da tela */
+    background-color: var(--cor2);  /* Cor de fundo */
+    color: var(--cor1);        /* Cor do texto */
+    text-align: center;     /* Centraliza o texto */
+    padding: 80px 0;     /* Espaçamento interno em cima e embaixo */
+    position: relative;  /* Pode usar fixed se quiser fixo na tela */
+    bottom: 0;   /* Para fixar no final se usar position: fixed */
+   
 }
 
 @media (max-width: 768px) {
+    
     .container {
-        flex-direction: column; /* Empilha texto e imagem */
-        align-items: center;
+        flex-direction: column;      /* Empilha texto e imagem */
+        
     }
 
     .imagem_Pg1 {
-        max-width: 80%;
-        transform: none; /* remove a subida fixa */
+        max-width: 90%;                 /* controla o limite máximo */
+        width: 60%;                     /* aumenta o tamanho da imagem */
+        height: auto;                   /* mantém a proporção */
+        transform: none;                /* remove a subida fixa */
+        margin: 0px 50px;
+        transform: translateY(-450px);  /* sobe um pouco em relação à tela */
     }
 
-    .botInici {
-        justify-content: center; /* Centraliza os botões */
-        margin-top: 10px;
+    .botInici {    
+        display: block;
+       margin: 60px -20px;
+        padding: 20px;
+        transform: translatey(300px);
     }
 
-    
-
-    .pag1_Paragr1 {
-        font-size: 5vw;
+    .titulo{
+        font-size: 10vw;
         text-align: center;
+        margin-top: -40px;
+        margin-left: -30px;
+        margin-bottom: 50px;
+    }
+    .pag1_Paragr1 {
+        font-size: 10vw;
+        text-align: center;
+        margin: 90px 70px;
     }
 
     .pag1_Paragr2 {
-        font-size: 3.5vw;
+        font-size: 4.8vw;
         text-align: center;
+        margin-top: 100px;
+        margin-bottom: -100px;
     }
 }
-.botaoIniciarProcesso {
-    position: relative;
-    display: flex; /* Alinha o botão à direita */
-    align-items: center;       /* Centraliza verticalmente (opcional) */
-    margin-top: 0px;
-    padding: 10px;
-    height: 50px;
-    width: 90px;}

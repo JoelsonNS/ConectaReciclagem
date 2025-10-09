@@ -1,36 +1,45 @@
-/* No arquivo: assets/css/segunda_tela.css */
+@charset "UTF-8";
 
-/*
-  Primeiro, preparamos o corpo da página para ser o nosso layout principal.
-*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Configurações globais do CSS */
+/* Variáveis que auxilia na mudnça das cores dos elemntos de forma mais prática, ex.: Mudar a cor da Var --cor0, tudo o que foi configurado nessa cor vai mudar pra nova cor escolhida*/
+:root {
+    --cor0: #000000;
+    --cor1: #ffffff;
+    --cor2: #02634f;
+    --cor3: #ff4500;
+    --cor4: #cc3700;
+    --cor5: #f6fadd;
+    --cor6: #65a365;
+
+    --font-padrao: Agrandir, Arial, sans-serif;
+    --font-destaque: "Bebas Neue", sans-serif;
+}
+
+/* Retira todas as margins e padding */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
-    margin: 0; /* Remove margens padrão */
-    display: flex;
-    flex-direction: column; /* Organiza os itens em uma coluna (logo, conteúdo, footer) */
-    min-height: 100vh;      /* Garante que o corpo ocupe 100% da altura da tela */
-    font-family: sans-serif;
-    background: linear-gradient(
-    180deg, 
-    #f1f4e2 85%, 
-    #2d6a4f 15%
-);
+    font-size: 16px; 
+    font-family: var(--font-padrao);
+    background-color: var(--cor5);
 }
 
-/*
-  Estilo para o logo no topo da página.
-*/
-.logo {
-    text-align:left;
-    padding: 20px;
-    color: #063e25;
+header {
+    min-height: 0px;
 }
+
 
 /*
   Esta é a regra chave para a centralização.
   Dizemos para o container principal crescer e ocupar todo o espaço
   vertical disponível, e então usamos flex para centralizar o seu conteúdo interno.
 */
-.segunda_tela_container {
+.botoes_cidadao_reciclador_container {
     flex-grow: 1; /* Faz este container crescer para empurrar o footer para baixo */
     display: flex;
     flex-direction: column;
@@ -41,69 +50,139 @@ body {
 /*
   Estilo para o título "Você é:".
 */
-.p1 {
+.texto_1 {
     font-size: 2.5em;
-    margin-bottom: 40px;
+    margin: 30px 10px;
 }
 
 /*
   Grupo dos botões, para ficarem lado a lado.
 */
-.botoes_cidadao_reciclador {
+.botoes_cidadao_reciclador_container {
     display: flex;
     gap: 30px;
 }
 
-/*
-  Estilos dos botões (com as cores laranja que definimos).
-*/
+/*Estilos dos botões (com as cores laranja que definimos).*/
 .botões_pagina1 {
-    padding: 20px 40px;
+    padding: 20px 20px;
     font-size: 1.5em;
     font-weight: bold;
     border-radius: 15px;
     cursor: pointer;
-    border: 3px solid #f48c06;
     transition: all 0.3s ease;
+    border: none;
+    
 }
 
 #botao_cidadao {
-    background-color: #f48c06;
-    color: white;
+    background-color: var(--cor2);
+    color: var(--cor1);
 }
 #botao_cidadao:hover {
-    background-color: #e85d04;
-    border-color: #e85d04;
+    background-color: var(--cor6);
+    
 }
 
 #botao_reciclador {
-    background-color: transparent;
-    color: #f48c06;
+    background-color: var(--cor3);
+    color: var(--cor1);
 }
 #botao_reciclador:hover {
-    background-color: #0b6408;
-    color: white;
+    background-color: var(--cor4);
 }
+
+
+.img_pagina_2_dupla {
+  width: auto;
+  height:350px;
+  margin-top: 30px !important;
+  display:block;
+  margin:0 auto;
+}
+
 
 /*
   Estilo para o rodapé na parte de baixo.
 */
 /* No seu arquivo principal: assets/css/style.css */
 
-.footer {
-    /* --- A SOLUÇÃO ESTÁ AQUI --- */
-    width: 100%;             /* 1. Força o rodapé a ocupar 100% da largura da tela */
-    box-sizing: border-box;  /* 2. Garante que o padding não "estoure" a largura */
-    
-    text-align: center;      /* 3. Agora, este comando vai centralizar o texto corretamente */
-    padding: 20px;
-    font-size: 0.8em;
-    color: #fffcfc;
+footer {
+    width: 100%;   /* Ocupa toda a largura da tela */
+    background-color: var(--cor2);  /* Cor de fundo */
+    color: var(--cor1);        /* Cor do texto */
+    text-align: center;     /* Centraliza o texto */
+    padding: 50px 0;     /* Espaçamento interno em cima e embaixo */
+    position: relative;  /* Pode usar fixed se quiser fixo na tela */
+    bottom: 0;   /* Para fixar no final se usar position: fixed */
 }
-.dupla {
-  width: auto;
-  height:400px;
-  margin-top: -9px !important;
-  display:block;
-  margin:0 auto;
+
+
+/* ====== MEDIA QUERY PARA DISPOSITIVOS MÓVEIS ====== */
+@media (max-width: 768px) {
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 2px;
+        margin: 10px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .botoes_cidadao_reciclador_container {
+        display: flex;
+        flex-direction: column; /* padrão: empilhado */
+        align-items: center;
+        justify-content: center;
+        gap: 20px; /* espaço entre o texto e os botões */
+        margin-top: 20px;
+    }
+
+    /* texto "Você é:" */
+    .texto_1 {
+        font-size: 1.6rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+      .img_pagina_2_dupla {
+        width: 200px;
+        height: 200px;
+
+        
+    }
+
+    /* ===== ESTILO DOS BOTÕES ===== */
+    .botões_pagina1 {
+        border: none;
+        border-radius: 12px;
+        padding: 6px 1px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+        width: 120px;
+    }
+
+    #botao_cidadao {
+        background-color: #006b5b; /* verde */
+    }
+
+    #botao_reciclador {
+        background-color: #ff4500; /* laranja */
+    }
+
+    .botões_pagina1:hover {
+        transform: scale(1.05);
+    }
+
+   
 }
+
