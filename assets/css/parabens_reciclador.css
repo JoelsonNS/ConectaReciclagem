@@ -1,3 +1,26 @@
+
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* CSS RESPONSIVO - por Gemini
+  Abordagem: Mobile First (o padrão é para celular, e adaptamos para telas maiores)
+  Técnica Principal: Flexbox para layout, unidades relativas (rem, %, vw) e clamp() para fontes.
+*/
+
+/* --- VARIÁVEIS GLOBAIS --- */
+:root {
+    --cor0: #000000;
+    --cor1: #ffffff;
+    --cor2: #02634f;
+    --cor3: #ff4500;
+    --cor4: #cc3700;
+    --cor5: #f6fadd;
+
+    --font-padrao: Agrandir, Arial, sans-serif;
+    --font-destaque: "Bebas Neue", sans-serif;
+}
+
 body {
     background-color: #eeeee3;
 }
@@ -19,6 +42,7 @@ body {
 .frase_parabens_reciclador {
     text-align: center;
     color: rgb(57, 105, 48);
+    font-family: var(--font-destaque);
 }
 .reciclador2 {
     display: block;

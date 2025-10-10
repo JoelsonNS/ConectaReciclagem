@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Área do Cidadão - ConectaReciclagem</title>
+     <link rel="shortcut icon" href="assets/icones/eco.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/pagina_cidadao.css">
+    <link rel="stylesheet" href="assets/css/pagina_cidadao.css">>
 </head>
 <body>
 
@@ -15,25 +15,25 @@
             <div class="form-wrapper">
                 <h1 class="cidadao_tit1">Para darmos continuidade, preencha as informações abaixo:</h1>
 
-                <form onsubmit="return false;"> <div class="linha">
+                <form autocomplete="off" onsubmit="return false;" > <div class="linha">
                         <label for="nameinput">Nome:</label>
-                        <input type="text" id="nameinput" required>
+                        <input type="text" id="nameinput" placeholder="Ex: José da Silva" required>
                     </div>
                     <div class="linha">
                         <label for="contatoinput">Contato:</label>
-                        <input type="text" id="contatoinput" required>
+                        <input type="text" id="contatoinput" placeholder="Ex: (81) 93266-8122" required>
                     </div>
                     <div class="linha">
                         <label for="enderecoinput">Endereço:</label>
-                        <input type="text" id="enderecoinput" required>
+                        <input type="text" id="enderecoinput" placeholder="Ex: Rua 7 de Setembro, 82" required>
                     </div>
                     <div class="linha">
                         <label for="materialinput">Tipo do material:</label>
-                        <input type="text" id="materialinput" required>
+                        <input type="text" id="materialinput" placeholder="Ex: Papel, Plático..." required>
                     </div>
                     <div class="linha">
                         <label for="quantidadeinput">Quantidade:</label>
-                        <input type="text" id="quantidadeinput" required>
+                        <input type="text" id="quantidadeinput" placeholder="Ex: 10" required>
                     </div>
                     <input type="button" value="ENVIAR" id="botao_enviar">
                 </form>
