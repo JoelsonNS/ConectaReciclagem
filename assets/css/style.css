@@ -44,12 +44,12 @@ header {
     display: flex;
     justify-content: space-between; /* Alinha o título à esquerda e o botão à direita */
     align-items: center;
-    padding: 20px;
+    padding: 50px;
     flex-wrap: wrap; /* Permite que os itens quebrem a linha em telas muito pequenas */
     gap: 20px; /* Espaçamento entre os itens do header */
 }
 
-.titulo {
+.titulo_princi {
     font-family: var(--font-destaque);
     /* A função clamp() define um tamanho de fonte fluido com limites:
        Mínimo: 2.5rem, Preferido: 10vw, Máximo: 4rem */
@@ -57,12 +57,6 @@ header {
     color: var(--cor0);
 }
 
-.logo {
-    /* Em vez de fixed, ele agora é parte do fluxo do header */
-    max-width: 200px;
-    height: auto;
-    order: -1; /* Faz o logo aparecer primeiro no mobile, se necessário */
-}
 
 /* --- CONTEÚDO PRINCIPAL --- */
 main {
@@ -79,6 +73,23 @@ main {
     gap: 40px; /* Espaço entre as seções de texto e imagem */
 }
 
+
+.logo-titulo {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    gap: 10px; /* Espaço entre texto e imagem */
+}
+
+.logo-icone {
+    width: 40px; /* Tamanho da imagem */
+    height: auto;
+}
+
+.titulo_princi {
+    margin: 0; /* Remove margens padrão */
+}
+
+
 .conteudo-texto {
     text-align: center; /* Centraliza todo o texto no mobile */
     width: 100%;
@@ -88,7 +99,8 @@ main {
     font-family: var(--font-destaque);
     color: var(--cor2);
     font-size: clamp(3rem, 12vw, 5rem);
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .pag1_Paragr2 {
@@ -113,24 +125,32 @@ main {
 /* --- BOTÕES --- */
 /* Estilo base para botões, para evitar repetição */
 .botao-base {
-    display: inline-block;
-    padding: 12px 28px;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-    transition: background-color 0.3s, transform 0.3s;
+ 
+    position: absolute;
+    top: 5%;          /* Percentual relativo ao contêiner pai */
+    right: 5%;        /* Percentual relativo ao contêiner pai */
+    z-index: 10;      /* Garante que o botão fique acima de outros elementos */
 }
 
 .botao-base:hover {
-    transform: scale(1.05); /* Efeito de zoom sutil no hover */
+    transform: scale(1.0); /* Efeito de zoom sutil no hover */
 }
 
 /* Botão principal (Iniciar Coleta) */
 .botInici {
+       display: flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(150px, 20vw, 220px); /* Mínimo 150px, máximo 220px, ajusta com vw */
+    height: clamp(50px, 8vw, 80px);   /* Mínimo 50px, máximo 80px, ajusta com vw */
     background-color: var(--cor3);
     color: var(--cor1);
-    font-size: clamp(1.1rem, 4vw, 1.4rem);
+    font-size: clamp(1rem, 2vw, 1.4rem); /* Ajusta o tamanho da fonte */
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
 .botInici:hover {
@@ -169,6 +189,8 @@ footer {
 
 /* --- TABLETS E TELAS PEQUENAS (A partir de 768px) --- */
 @media (min-width: 768px) {
+
+
     header {
         flex-wrap: nowrap; /* Impede a quebra de linha no header */
     }
@@ -177,6 +199,26 @@ footer {
         text-align: left;
     }
 
+    .logo-titulo {
+        flex-direction: column; /* Empilha em celular */
+        text-align: center;
+    }
+    .logo-icone {
+        width: 30px; /* Reduz o tamanho em celular */
+    }
+
+
+    .botao-base {
+        top: 60px;          /* Fixo para tablets */
+        right: 50px;        /* Fixo para tablets */
+    }
+ 
+    .botInici {
+        width: clamp(180px, 20vw, 220px); /* Ajuste para telas maiores */
+        height: clamp(60px, 8vw, 80px);
+        font-size: clamp(1.1rem, 2vw, 1.4rem);
+    }
+    
     .container-principal {
         flex-direction: row; /* Itens ficam lado a lado */
         text-align: left;
@@ -192,6 +234,7 @@ footer {
     .pag1_Paragr2 {
         margin: 0; /* Remove a centralização */
         max-width: none;
+    
     }
 
     .container-imagem {
@@ -206,6 +249,19 @@ footer {
         font-size: 18px; /* Aumenta a fonte base para melhor leitura */
     }
     
+    .botao-base {
+        top: 60px;
+        right: 50px;
+    }
+
+    .botInici {
+        width: clamp(200px, 20vw, 220px); /* Ajuste para desktops */
+        height: clamp(70px, 8vw, 80px);
+        font-size: clamp(1.2rem, 2vw, 1.4rem);
+    }
+
+
+
     .conteudo-texto {
-      padding-right: 20px; /* Adiciona um espaço para não colar na imagem */
+        padding-right: 20px; /* Adiciona um espaço para não colar na imagem */
 }   }

@@ -1,6 +1,38 @@
-body {
-    background-color: #eeeee3;
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Configurações globais do CSS */
+/* Variáveis que auxilia na mudnça das cores dos elemntos de forma mais prática, ex.: Mudar a cor da Var --cor0, tudo o que foi configurado nessa cor vai mudar pra nova cor escolhida*/
+:root {
+    --cor0: #000000;
+    --cor1: #ffffff;
+    --cor2: #02634f;
+    --cor3: #ff4500;
+    --cor4: #cc3700;
+    --cor5: #f6fadd;
+    --cor6: #65a365;
+
+    --font-padrao: Agrandir, Arial, sans-serif;
+    --font-destaque: "Bebas Neue", sans-serif;
 }
+
+/* Retira todas as margins e padding */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-size: 16px; 
+    font-family: var(--font-padrao);
+    background-color: var(--cor5);
+}
+
+header {
+    min-height: 0px;
+}
+
 .mensagem_de_parabens_cidadao {
     color:#0f5301;
     text-align: center;
@@ -12,7 +44,7 @@ body {
     height:auto;
     display:block;
     margin:0 auto;
-    margin-top: -30px;
+    margin-top: 0px;
 }
 #botao_inicio_cidadao {
     width:150px;
