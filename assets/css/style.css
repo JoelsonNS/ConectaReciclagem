@@ -199,10 +199,7 @@ footer {
         text-align: left;
     }
 
-    .logo-titulo {
-        flex-direction: column; /* Empilha em celular */
-        text-align: center;
-    }
+   
     .logo-icone {
         width: 30px; /* Reduz o tamanho em celular */
     }

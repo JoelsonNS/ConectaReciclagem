@@ -34,10 +34,11 @@ header {
 }
 
 .mensagem_de_parabens_cidadao {
-    color:#0f5301;
     text-align: center;
     margin-top: 40px;
     font-size: 35px;
+    font-family: var(--font-destaque);
+    color: var(--cor2);
 }
 .familia2 {
     width:300px;
@@ -53,6 +54,7 @@ header {
     text-align: center;
     margin:0 auto;
     margin-top:30px;
+    margin-bottom: 10px;
     display:block;
     background-color: orangered;
     color:white;

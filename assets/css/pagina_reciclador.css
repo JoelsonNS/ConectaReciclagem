@@ -55,10 +55,11 @@ body {
     border:none;
     border-radius: 10%;
     margin-left: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     margin-top: 80px;
     cursor:pointer;
     font-size: 15px;
+    
 }
 
 .reciclador_tit1 {
@@ -149,4 +150,15 @@ body {
     height: auto; /* Mantém a proporção da imagem */
     border-radius: 5px;
     margin-top: 10px; /* Espaço entre o texto e a imagem */
+}
+
+
+footer {
+    width: 100%;
+    height: 10%;
+    background-color: var(--cor2);
+    color: var(--cor1);
+    text-align: center;
+    padding: 10px 20px; /* Menos padding vertical para um visual mais limpo */
+    margin-top: 345px; /* Espaço entre o conteúdo principal e o rodapé */
 }
