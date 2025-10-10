@@ -53,6 +53,7 @@ header {
 .texto_1 {
     font-size: 2.5em;
     margin: 30px 10px;
+    color: var(--cor2);
 }
 
 /*
@@ -98,7 +99,7 @@ header {
   height:350px;
   margin-top: 30px !important;
   display:block;
-  margin:0 auto;
+  margin:-20px auto;
 }
 
 
@@ -108,13 +109,13 @@ header {
 /* No seu arquivo principal: assets/css/style.css */
 
 footer {
-    width: 100%;   /* Ocupa toda a largura da tela */
-    background-color: var(--cor2);  /* Cor de fundo */
-    color: var(--cor1);        /* Cor do texto */
-    text-align: center;     /* Centraliza o texto */
-    padding: 50px 0;     /* Espaçamento interno em cima e embaixo */
-    position: relative;  /* Pode usar fixed se quiser fixo na tela */
-    bottom: 0;   /* Para fixar no final se usar position: fixed */
+    width: 100%;
+    height: 10%;
+    background-color: var(--cor2);
+    color: var(--cor1);
+    text-align: center;
+    padding: 10px 20px; /* Menos padding vertical para um visual mais limpo */
+    margin-top: 340px; /* Espaço entre o conteúdo principal e o rodapé */
 }
 
 
@@ -151,7 +152,7 @@ footer {
         margin-bottom: 10px;
     }
 
-      .img_pagina_2_dupla {
+    .img_pagina_2_dupla {
         width: 200px;
         height: 200px;
 
@@ -182,7 +183,7 @@ footer {
     .botões_pagina1:hover {
         transform: scale(1.05);
     }
-
    
-}
+   
 
+ }

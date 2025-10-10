@@ -8,7 +8,7 @@ body {
     font-size: 35px;
 }
 .familia2 {
-    width:500px;
+    width:300px;
     height:auto;
     display:block;
     margin:0 auto;
@@ -28,10 +28,5 @@ body {
     border:none;
     cursor:pointer;
 }
-.logo2 {
-    position:absolute;
-    margin:0;
-    right:0;
-    width:200px;
-    height:auto;
-}
+
+
