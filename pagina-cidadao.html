@@ -3,78 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="Images">
-    <title>Área do cidadão - ConectaReciclagem</title>
-
-    <link rel="shortcut icon" href="assets/icones/eco.ico" type="image/x-icon">
+    <title>Área do Cidadão - ConectaReciclagem</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/pagina_cidadao.css">
-
 </head>
 <body>
+    <h1 class="cidadao_tit1">Para darmos continuidade, preencha as informações abaixo:</h1>
 
-    <main>
-
-        <h1 class="cidadao_tit1">Para darmos 
-        continuidade, preencha as informações abaixo:</h1>
-
-      <form autocomplete="off">
+    <img src="assets/Images/logo.png" alt="logo_conecta" class="logo">
+    
     <div class="linha">
         <p class="name">Nome:</p>
-        <input type="text" id="nameinput" placeholder="Ex: José da Silva" required>
+        <input type="text" id="nameinput" required>
     </div>
 
     <div class="linha">
         <p class="contato">Contato:</p>
-        <input type="text" id="contatoinput" placeholder="Ex: (00) 98129-1995)" required>
+        <input type="text" id="contatoinput" required>
     </div>
 
     <div class="linha">
         <p class="endereco">Endereço:</p>
-        <input type="text" id="enderecoinput" placeholder="Ex: Rua Sete de Setembro, 26, Centro" required>
+        <input type="text" id="enderecoinput" required>
     </div>
 
-    <!-- Nova seção para os botões de tipo de material -->
     <div class="linha">
         <p class="tipo_do_material">Tipo do material:</p>
-        <div class="opcoes-material">
-            <input type="checkbox" id="papel" name="material[]" value="Papel" />
-            <label for="papel" class="botao-material">
-                <span class="icone">📦</span> <!-- Placeholder para ícone de caixa (use SVG se preferir) -->
-                <span class="texto">Papel</span>
-            </label>
-
-            <input type="checkbox" id="plastico" name="material[]" value="Plástico" />
-            <label for="plastico" class="botao-material">
-                <span class="icone">🛢️</span> <!-- Placeholder para garrafa plástica -->
-                <span class="texto">Plástico</span>
-            </label>
-            <input type="checkbox" id="Oleo" name="material[]" value="Vidro" />
-            
-            <label for="vidro" class="botao-material">
-                <span class="icone">🍾</span> <!-- Placeholder para garrafa de vidro -->
-                <span class="texto">Vidro</span>
-            </label>
-        </div>
+        <input type="text" id="materialinput" required>
     </div>
 
-    
-    
     <div class="linha">
-        <p class="foto_do_material">Foto do material:</p>
-        <input type="file" id="imagem" accept="image/*" required>
+        <p class="quantidade">Quantidade:</p>
+        <input type="text" id="quantidadeinput" required>
     </div>
 
-        <input type="submit" value="ENVIAR" id="botao_enviar">
-</form>
+    <input type="button" value="ENVIAR" id="botao_enviar">
 
-        <img src="assets/Images/familia.png" alt="familia" class="familia">
-        
-    </main>
-       
+    <img src="assets/Images/familia.png" alt="familia" class="familia">
+    
     <footer class="footer">
-        <p class="footer">&copy; 2025 Conecta Reciclagem - Todos os direitos reservados - Flavia, Raquel, Leandro, Alice e Joelson</p> 
+        <p>&copy; 2025 Conecta Reciclagem - Todos os direitos reservados - Flavia, Raquel, Leandro, Alice e Joelson</p> 
     </footer>
+    
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore-compat.js"></script>
 
     <script src="pagina-cidadao.js"></script>
 </body>
