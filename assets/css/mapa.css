@@ -1,0 +1,10 @@
+/* define o tamanho do mapa */
+#map {
+  height: 600px;
+  width: 98%;
+  margin: 10px auto;
+}
+
+.title{
+  margin: 5px 20px;
+}
