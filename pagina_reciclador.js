@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const botao_aceitar = document.getElementById("botao_aceitar_coleta");
     botao_aceitar.addEventListener('click',function(){
         const nome_do_reciclador = document.getElementById("nome_reciclador_input").value;
-        localStorage.setItem("Nome_Reciclador",nome_do_reciclador);
         window.location.href = "parabens_reciclador.html";
     })
       const botao_mapa = document.getElementById("botao_mapa");
@@ -15,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // --- CONFIGURAÇÃO DO FIREBASE ---
 const firebaseConfig = {
-  apiKey: "SUA_API_KEY", // <-- IMPORTANTE: Substitua pela sua chave de API real
+  apiKey: "SUA_API_KEY", 
   authDomain: "conectareciclagem.firebaseapp.com",
   projectId: "conectareciclagem",
   storageBucket: "conectareciclagem.appspot.com",
